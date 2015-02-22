@@ -53,4 +53,4 @@ if [ -d "$LOC2/sabnzbd" ]; then
 fi
 
 mkdir $LOC2/sabnzbd
-git clone https://github.com/sabnzbd/sabnzbd.git $LOC2/sabnzbd
+git clone -b master https://github.com/sabnzbd/sabnzbd.git $LOC2/sabnzbd

@@ -46,3 +46,7 @@
 
   > docker run --name sabnzbd -v /mnt/downloads:/opt/downloads/  -p 44091:9091 -p 9090:9090
 
+## Backup config file
+
+  > CONT=`docker ps -a | grep sabnzbd | awk '{ print $1 }'`
+  > docker cp $CONT:/root/.sabnzbd/sabnzbd.ini $PWD

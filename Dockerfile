@@ -49,8 +49,7 @@ RUN cp /tmp/rar.tar.gz/rar/unrar /usr/local/sbin/
 RUN cp -r /tmp/par2commandline-lin64.tar.gz/par2cmdline-0.*/* /usr/local/sbin/
 
 # Install sabnzbd
-COPY sabnzbd/ /opt/sabnzbd
-COPY sabnzbd_config/sabnzbd.ini /root/.sabnzbd/sabnzbd.ini
+COPY sabnzbd_config/sabnzbd.ini //.sabnzbd/sabnzbd.ini
 
 # Copy SSL
 COPY ssl/sabnzbd.pem /opt/sabnzbd/ssl/sabnzbd.pem
@@ -63,7 +62,7 @@ RUN rm -rf /tmp/*
 
 # Expose volumes
 RUN mkdir /var/log/sabznbd
-VOLUME [ "/var/log/sabnzbd", "//.sabnzbd/" "/opt/downloads/completed" ]
+VOLUME [ "/var/log/sabnzbd" "/opt/downloads/completed" ]
 
 EXPOSE 8080 9001 9090
 
